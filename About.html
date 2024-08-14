@@ -30,7 +30,7 @@
             background: linear-gradient(135deg, #6e8efb, #a777e3);
             color: #fff;
             padding: 20px 0;
-            text-align: center;
+            position: relative;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -38,50 +38,50 @@
             font-size: 2.5em;
             margin: 0;
             letter-spacing: 2px;
+            text-align: center;
         }
 
-        /* About Section */
-        .about-container {
-            width: 80%;
-            margin: 50px auto;
+        /* Home Button Styles */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             background-color: #fff;
-            padding: 40px;
+            color: #6e8efb;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 2px solid #6e8efb;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #6e8efb;
+            color: #fff;
+        }
+
+        /* About Content Styles */
+        .about-container {
+            width: 60%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         .about-container h2 {
-            color: #333;
-            margin-top: 0;
             font-size: 2em;
-            border-bottom: 2px solid #6e8efb;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+            color: #333;
+            margin-bottom: 20px;
         }
 
         .about-container p {
-            color: #555;
             font-size: 1.1em;
+            color: #555;
             margin-bottom: 20px;
             line-height: 1.8;
-        }
-
-        .about-container p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
         }
     </style>
 </head>
@@ -89,32 +89,23 @@
 <body>
     <header>
         <h1>About Us</h1>
+        <a href="index.html" class="home-button">Home</a>
     </header>
 
     <div class="about-container">
-        <h2>Who We Are</h2>
+        <h2>Welcome to Our Company</h2>
         <p>
-            Welcome to our blog! We are a team of passionate individuals dedicated to sharing insights, stories, and
-            knowledge across various topics. Our goal is to provide our readers with valuable and engaging content that
-            inspires, educates, and entertains.
+            Our company is dedicated to delivering the best services and products to our customers. We pride ourselves on
+            our commitment to quality and excellence. Our team works hard every day to ensure that our clients receive
+            the highest level of service, and we constantly strive to improve our offerings to meet the ever-changing needs
+            of the market.
         </p>
         <p>
-            Our journey began with a simple idea: to create a space where people can come together to learn and grow.
-            Over time, we have evolved into a platform that covers a wide range of subjects, from technology and
-            lifestyle to business and creativity.
-        </p>
-        <p>
-            We believe in the power of community and the importance of continuous learning. Whether you are here to gain
-            new insights or just to enjoy some light reading, we are here to support you every step of the way.
-        </p>
-        <p>
-            Thank you for being a part of our community. We look forward to sharing many more stories with you.
+            Founded in [Year], our company has grown to become a leader in the industry, known for our innovation,
+            reliability, and customer satisfaction. We believe in building strong, long-lasting relationships with our
+            clients, and we look forward to serving you for many years to come.
         </p>
     </div>
-
-    <footer>
-        <p>&copy; 2024 My Blog. All rights reserved.</p>
-    </footer>
 </body>
 
 </html>
