@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A@niV</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 5px 10px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Container Styles */
+        .container {
+            width: 85%;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        /* Blog Post Styles */
+        .post {
+            background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
+            background-image: url('https://www.transparenttextures.com/patterns/linen.png');
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .post h2 {
+            color: #222;
+            margin-top: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .post p {
+            color: #555;
+            font-family: 'Georgia', serif;
+        }
+
+        .post img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            transition: opacity 0.3s ease;
+        }
+
+        .post img:hover {
+            opacity: 0.9;
+        }
+
+        .post .meta {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>A@niV</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="post">
+            <h2>Snowflake Useful Tips</h2>
+            <p class="meta">Posted on August 14, 2024 by Author</p>
+            <img src="https://via.placeholder.com/800x400" alt="Blog Image">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero sollicitudin
+                consequat. Sed vel magna nec lorem bibendum dignissim. Fusce suscipit auctor tellus, sed dapibus metus
+                dignissim eu. Integer sit amet libero a ante scelerisque venenatis.
+            </p>
+        </div>
+
+        <div class="post">
+            <h2>My Experience with Snowflake</h2>
+            <p class="meta">Posted on August 10, 2024 by Author</p>
+            <img src="https://via.placeholder.com/800x400" alt="Blog Image">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero sollicitudin
+                consequat. Sed vel magna nec lorem bibendum dignissim. Fusce suscipit auctor tellus, sed dapibus metus
+                dignissim eu. Integer sit amet libero a ante scelerisque venenatis.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 A@niV. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
