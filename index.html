@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A@nVe - Your go-to blog for insights on Snowflake, Python, and Data Science.">
+    <meta name="keywords" content="Snowflake, Data Science, Python, SQL, Blog">
+    <meta property="og:title" content="A@nVe">
+    <meta property="og:description" content="Explore insightful articles on Snowflake and Data Science.">
+    <meta property="og:image" content="URL_to_your_image.jpg">
+    <meta property="og:url" content="https://www.yourwebsite.com">
     <title>A@nVe</title>
     <style>
         /* General Styles */
@@ -42,24 +48,30 @@
 
         /* Navigation Styles */
         nav {
-            background-color: #444;
-            padding: 10px 0;
+            background: linear-gradient(135deg, #444, #666); /* Gradient background */
+            padding: 15px 0; /* Increased padding */
             text-align: center;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         nav a {
             color: #fff;
             text-transform: uppercase;
             font-weight: 600;
-            margin: 0 15px;
-            padding: 5px 10px;
-            transition: background 0.3s ease;
+            margin: 0 20px; /* Increased margin for spacing */
+            padding: 10px 15px; /* Increased padding for better touch targets */
+            border-radius: 5px; /* Rounded corners */
+            transition: background 0.3s ease, transform 0.3s ease; /* Transition effects */
         }
 
         nav a:hover {
-            background-color: #555;
-            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .current {
+            background-color: rgba(255, 255, 255, 0.3); /* Highlight active link */
+            border-radius: 5px; /* Rounded corners */
         }
 
         /* Container Styles */
@@ -75,33 +87,35 @@
         .post {
             background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
             background-image: url('https://www.transparenttextures.com/patterns/linen.png');
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 15px; /* Reduced padding */
+            border-radius: 8px; /* Reduced border radius */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Reduced shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .post:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
         }
 
         .post h2 {
             color: #222;
             margin-top: 0;
             font-family: 'Georgia', serif;
+            font-size: 1.5em; /* Reduced font size */
         }
 
         .post p {
             color: #555;
             font-family: 'Georgia', serif;
+            font-size: 0.9em; /* Reduced font size */
         }
 
         .post img {
             max-width: 100%;
-            border-radius: 12px;
-            margin-top: 15px;
-            margin-bottom: 15px;
+            border-radius: 8px; /* Reduced border radius */
+            margin-top: 10px; /* Reduced margin */
+            margin-bottom: 10px; /* Reduced margin */
             transition: opacity 0.3s ease;
         }
 
@@ -110,8 +124,28 @@
         }
 
         .post .meta {
+            font-size: 0.8em; /* Reduced font size */
+            color: #888;
+        }
+
+        .post .tags {
             font-size: 0.9em;
             color: #888;
+        }
+
+        /* Read More Button */
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px; /* Adjusted padding */
+            background-color: #008CBA;
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: #005f7f;
         }
 
         /* Footer Styles */
@@ -127,6 +161,48 @@
             margin: 0;
             font-size: 0.9em;
         }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        /* Back to Top Button */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #008CBA;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #005f7f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack posts on small screens */
+            }
+
+            nav a {
+                display: block; /* Stack navigation links */
+                margin: 5px 0;
+            }
+        }
     </style>
 </head>
 
@@ -138,7 +214,7 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="About.html">About</a>
-        <a href="Blog.html">Blog</a>
+        <a href="Blog.html" class="current">Blog</a>
         <a href="Contact US.html">Contact</a>
     </nav>
 
@@ -146,49 +222,84 @@
         <div class="post">
             <h2>Snowflake Useful Tips</h2>
             <p class="meta">Posted on August 14, 2024 by Author</p>
-            <img src="lab.png" alt="Blog Image">
+            <img src="lab.png" alt="A visual representation of snowflake tips">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero sollicitudin
                 consequat. Sed vel magna nec lorem bibendum dignissim. Fusce suscipit auctor tellus, sed dapibus metus
                 dignissim eu. Integer sit amet libero a ante scelerisque venenatis.
             </p>
+            <p class="tags">Tags: <span>Snowflake</span>, <span>Data Science</span></p>
+            <a href="post-link.html" class="read-more">Read More</a>
         </div>
 
         <div class="post">
             <h2>My Experience with Snowflake</h2>
             <p class="meta">Posted on August 10, 2024 by Author</p>
-            <img src="workflow.png" alt="Blog Image">
+            <img src="workflow.png" alt="A visual representation of my experience with Snowflake">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero sollicitudin
                 consequat. Sed vel magna nec lorem bibendum dignissim. Fusce suscipit auctor tellus, sed dapibus metus
                 dignissim eu. Integer sit amet libero a ante scelerisque venenatis.
             </p>
+            <p class="tags">Tags: <span>Snowflake</span>, <span>Experience</span></p>
+            <a href="post-link.html" class="read-more">Read More</a>
         </div>
 
         <div class="post">
             <h2>Python for Data Science</h2>
             <p class="meta">Posted on August 5, 2024 by Author</p>
-            <img src="Python for Datascience.PNG" alt="Python Image">
+            <img src="Python for Datascience.PNG" alt="Python programming for data science">
             <p>
                 Python is a powerful tool for data science and machine learning. In this post, we explore some of the
                 key libraries that make Python a go-to language for data professionals...
             </p>
+            <p class="tags">Tags: <span>Python</span>, <span>Data Science</span></p>
+            <a href="post-link.html" class="read-more">Read More</a>
         </div>
 
         <div class="post">
             <h2>Understanding SQL Joins</h2>
             <p class="meta">Posted on July 28, 2024 by Author</p>
-            <img src="Understanding SQL Joins.PNG" alt="SQL Image">
+            <img src="Understanding SQL Joins.PNG" alt="Visual representation of SQL joins">
             <p>
                 SQL joins are a fundamental concept in database management. This post covers the different types of joins
                 and their practical applications in querying databases...
             </p>
+            <p class="tags">Tags: <span>SQL</span>, <span>Database</span></p>
+            <a href="post-link.html" class="read-more">Read More</a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 A@niV. All rights reserved.</p>
+        <p>&copy; 2024 A@nVe. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </div>
     </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
 </body>
 
 </html>
