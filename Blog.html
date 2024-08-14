@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* Blog Post Container */
+        .blog-container {
+            width: 85%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        /* Blog Post Styles */
+        .post {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 20px;
+        }
+
+        .post-content h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        .post-content p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .post-content .meta {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .post-content .read-more {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #6e8efb;
+            color: #fff;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .post-content .read-more:hover {
+            background-color: #a777e3;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Our Blog</h1>
+    </header>
+
+    <div class="blog-container">
+        <div class="post">
+            <img src="https://via.placeholder.com/800x400" alt="Blog Image">
+            <div class="post-content">
+                <h2>Blog Post Title 1</h2>
+                <p class="meta">Posted on August 14, 2024 by Author</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero
+                    sollicitudin consequat...
+                </p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://via.placeholder.com/800x400" alt="Blog Image">
+            <div class="post-content">
+                <h2>Blog Post Title 2</h2>
+                <p class="meta">Posted on August 10, 2024 by Author</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero
+                    sollicitudin consequat...
+                </p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://via.placeholder.com/800x400" alt="Blog Image">
+            <div class="post-content">
+                <h2>Blog Post Title 3</h2>
+                <p class="meta">Posted on August 5, 2024 by Author</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero
+                    sollicitudin consequat...
+                </p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://via.placeholder.com/800x400" alt="Blog Image">
+            <div class="post-content">
+                <h2>Blog Post Title 4</h2>
+                <p class="meta">Posted on July 30, 2024 by Author</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero
+                    sollicitudin consequat...
+                </p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
