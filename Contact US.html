@@ -30,7 +30,7 @@
             background: linear-gradient(135deg, #6e8efb, #a777e3);
             color: #fff;
             padding: 20px 0;
-            text-align: center;
+            position: relative;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -38,25 +38,43 @@
             font-size: 2.5em;
             margin: 0;
             letter-spacing: 2px;
+            text-align: center;
         }
 
-        /* Contact Form Container */
-        .contact-container {
-            width: 80%;
-            margin: 50px auto;
+        /* Home Button Styles */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             background-color: #fff;
-            padding: 40px;
+            color: #6e8efb;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 2px solid #6e8efb;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #6e8efb;
+            color: #fff;
+        }
+
+        /* Contact Form Styles */
+        .contact-container {
+            width: 50%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         }
 
         .contact-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
             color: #333;
-            margin-top: 0;
-            font-size: 2em;
-            border-bottom: 2px solid #6e8efb;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+            text-align: center;
         }
 
         .contact-container form {
@@ -65,75 +83,34 @@
         }
 
         .contact-container label {
+            margin-bottom: 10px;
             font-weight: bold;
-            margin-bottom: 5px;
+            color: #555;
         }
 
-        .contact-container input[type="text"],
-        .contact-container input[type="email"],
+        .contact-container input,
         .contact-container textarea {
             padding: 10px;
-            font-size: 1em;
             margin-bottom: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background-color: #f9f9f9;
-            transition: background-color 0.3s ease, border 0.3s ease;
-        }
-
-        .contact-container input[type="text"]:focus,
-        .contact-container input[type="email"]:focus,
-        .contact-container textarea:focus {
-            background-color: #eef5ff;
-            border: 1px solid #6e8efb;
-            outline: none;
-        }
-
-        .contact-container textarea {
-            resize: vertical;
-            height: 150px;
-        }
-
-        .contact-container button[type="submit"] {
-            padding: 15px;
             font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-container input[type="submit"] {
             background-color: #6e8efb;
             color: #fff;
             border: none;
-            border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
         }
 
-        .contact-container button[type="submit"]:hover {
+        .contact-container input[type="submit"]:hover {
             background-color: #a777e3;
-            transform: translateY(-2px);
-        }
-
-        .contact-container .error {
-            color: #d9534f;
-            margin-bottom: 15px;
-            display: none;
-        }
-
-        .contact-container .success {
-            color: #5cb85c;
-            margin-bottom: 15px;
-            display: none;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
         }
     </style>
 </head>
@@ -141,59 +118,24 @@
 <body>
     <header>
         <h1>Contact Us</h1>
+        <a href="index.html" class="home-button">Home</a>
     </header>
 
     <div class="contact-container">
         <h2>Get in Touch</h2>
-        <form id="contactForm" onsubmit="return validateForm()">
-            <div class="error" id="error-message"></div>
-            <div class="success" id="success-message">Thank you! Your message has been sent.</div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name">
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <input type="submit" value="Send Message">
         </form>
     </div>
-
-    <footer>
-        <p>&copy; 2024 My Blog. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function validateForm() {
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            const errorMessage = document.getElementById('error-message');
-            const successMessage = document.getElementById('success-message');
-
-            errorMessage.style.display = 'none';
-            successMessage.style.display = 'none';
-
-            if (name === '' || email === '' || message === '') {
-                errorMessage.textContent = 'All fields are required.';
-                errorMessage.style.display = 'block';
-                return false;
-            }
-
-            const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-            if (!emailPattern.test(email)) {
-                errorMessage.textContent = 'Please enter a valid email address.';
-                errorMessage.style.display = 'block';
-                return false;
-            }
-
-            successMessage.style.display = 'block';
-            document.getElementById('contactForm').reset();
-            return false; // Prevent actual form submission for demo purposes
-        }
-    </script>
 </body>
 
 </html>
