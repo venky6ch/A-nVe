@@ -11,6 +11,7 @@
     <meta property="og:image" content="URL_to_your_image.jpg">
     <meta property="og:url" content="https://www.yourwebsite.com">
     <title>A@nVe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* General Styles */
         body {
@@ -35,7 +36,7 @@
         header {
             background: linear-gradient(135deg, #6e8efb, #a777e3);
             color: #fff;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -43,13 +44,13 @@
         header h1 {
             font-size: 2.5em;
             margin: 0;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         /* Navigation Styles */
         nav {
             background: linear-gradient(135deg, #444, #666); /* Gradient background */
-            padding: 15px 0; /* Increased padding */
+            padding: 8px 0; /* Increased padding */
             text-align: center;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -77,17 +78,17 @@
         /* Container Styles */
         .container {
             width: 85%;
-            margin: 30px auto;
+            margin: 15px auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 10px;
         }
 
         /* Blog Post Styles */
         .post {
             background: linear-gradient(145deg, #f0f0f0, #d9d9d9);
             background-image: url('https://www.transparenttextures.com/patterns/linen.png');
-            padding: 15px; /* Reduced padding */
+            padding: 5px; /* Reduced padding */
             border-radius: 8px; /* Reduced border radius */
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Reduced shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -95,14 +96,14 @@
 
         .post:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.30);
         }
 
         .post h2 {
             color: #222;
             margin-top: 0;
             font-family: 'Georgia', serif;
-            font-size: 1.5em; /* Reduced font size */
+            font-size: 1.2em; /* Reduced font size */
         }
 
         .post p {
@@ -112,10 +113,10 @@
         }
 
         .post img {
-            max-width: 100%;
-            border-radius: 8px; /* Reduced border radius */
-            margin-top: 10px; /* Reduced margin */
-            margin-bottom: 10px; /* Reduced margin */
+            max-width: 90%;
+            border-radius: 5px; /* Reduced border radius */
+            margin-top: 2px; /* Reduced margin */
+            margin-bottom: 2px; /* Reduced margin */
             transition: opacity 0.3s ease;
         }
 
@@ -124,23 +125,23 @@
         }
 
         .post .meta {
-            font-size: 0.8em; /* Reduced font size */
+            font-size: 0.75em; /* Reduced font size */
             color: #888;
         }
 
         .post .tags {
             font-size: 0.9em;
-            color: #888;
+            color: #222;
         }
 
         /* Read More Button */
         .read-more {
             display: inline-block;
             margin-top: 10px;
-            padding: 8px 12px; /* Adjusted padding */
+            padding: 5px 9px; /* Adjusted padding */
             background-color: #008CBA;
             color: #fff;
-            border-radius: 5px;
+            border-radius: 4px;
             transition: background 0.3s ease;
         }
 
@@ -162,30 +163,52 @@
             font-size: 0.9em;
         }
 
-        .social-media {
+        /* Social Media Icons */
+        .social-icons {
             margin-top: 10px;
         }
 
-        .social-media a {
+        .social-icons a {
             color: #fff;
-            margin: 0 10px;
+            line-height: 30px;
+            font-size: 30px;
+            margin: 0 10px; /* Increased margin for spacing */
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2); /* Slightly enlarge on hover */
+        }
+
+        /* Highlight X, Facebook, and LinkedIn */
+        .fa-twitter-square {
+            color: #55ACEE; /* X color */
+        }
+
+        .fa-facebook-square {
+            color: #3B5998;
+        }
+
+        .fa-linkedin-square {
+            color: #007BB6;
         }
 
         /* Back to Top Button */
         #myBtn {
             display: none;
             position: fixed;
-            bottom: 20px;
-            right: 30px;
+            bottom: 15px;
+            right: 20px;
             z-index: 99;
-            font-size: 18px;
+            font-size: 13px;
             border: none;
             outline: none;
             background-color: #008CBA;
             color: white;
             cursor: pointer;
-            padding: 15px;
-            border-radius: 4px;
+            padding: 13px;
+            border-radius: 3px;
         }
 
         #myBtn:hover {
@@ -212,9 +235,9 @@
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html" >Home</a>
         <a href="About.html">About</a>
-        <a href="Blog.html" class="current">Blog</a>
+        <a href="Blog.html">Blog</a>
         <a href="Contact US.html">Contact</a>
     </nav>
 
@@ -233,15 +256,15 @@
         </div>
 
         <div class="post">
-            <h2>My Experience with Snowflake</h2>
+            <h2>My Experience with X</h2> <!-- Changed to X -->
             <p class="meta">Posted on August 10, 2024 by Author</p>
-            <img src="workflow.png" alt="A visual representation of my experience with Snowflake">
+            <img src="workflow.png" alt="A visual representation of my experience with X">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque leo at libero sollicitudin
                 consequat. Sed vel magna nec lorem bibendum dignissim. Fusce suscipit auctor tellus, sed dapibus metus
                 dignissim eu. Integer sit amet libero a ante scelerisque venenatis.
             </p>
-            <p class="tags">Tags: <span>Snowflake</span>, <span>Experience</span></p>
+            <p class="tags">Tags: <span>X</span>, <span>Experience</span></p> <!-- Changed to X -->
             <a href="post-link.html" class="read-more">Read More</a>
         </div>
 
@@ -268,14 +291,31 @@
             <p class="tags">Tags: <span>SQL</span>, <span>Database</span></p>
             <a href="post-link.html" class="read-more">Read More</a>
         </div>
+		<div class="post">
+            <h2>Understanding SQL Store Procedure</h2>
+            <p class="meta">Posted on July 28, 2024 by Author</p>
+            <img src="Understanding SQL Joins.PNG" alt="Visual representation of SQL joins">
+            <p>
+                SQL joins are a fundamental concept in database management. This post covers the different types of joins
+                and their practical applications in querying databases...
+            </p>
+            <p class="tags">Tags: <span>SQL</span>, <span>Database</span></p>
+            <a href="post-link.html" class="read-more">Read More</a>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2024 A@nVe. All rights reserved.</p>
-        <div class="social-media">
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <div class="social-icons">
+            <a href="https://x.com/yourprofile" target="_blank" title="X">
+                <i class="fa fa-twitter-square"></i> <!-- Changed to X -->
+            </a>
+            <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
         </div>
     </footer>
 
